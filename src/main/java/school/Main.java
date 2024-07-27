@@ -18,16 +18,13 @@ public class Main {
         schoolService.addTeacher(teacher1);
         schoolService.addTeacher(teacher2);
 
-        // Process fees and salaries
         schoolService.receiveFee(student1, 6000);
         schoolService.receiveFee(student2, 11000);
         schoolService.paySalary(teacher1, 10500);
         schoolService.paySalary(teacher2, 9900);
 
-        // Display all information
         schoolService.displayAll();
 
-        // Display finance information
         schoolService.displayFinances();
 
         System.out.println("Making SCHOOL PAY SALARY----");
