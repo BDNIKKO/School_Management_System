@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SchoolService {
-    private List<Student> students = new ArrayList<>();
-    private List<Teacher> teachers = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
+    private final List<Teacher> teachers = new ArrayList<>();
     private int totalMoneyEarned;
     private int totalMoneySpent;
 

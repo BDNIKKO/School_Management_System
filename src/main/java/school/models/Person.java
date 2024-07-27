@@ -2,11 +2,11 @@ package school.models;
 
 public abstract class Person {
     private String name;
-    private int age;
+    private int id;
 
-    public Person(String name, int age) {
+    public Person(int id, String name) {
         this.name = name;
-        this.age = age;
+        this.id = id;
     }
 
     public String getName() {
@@ -17,16 +17,16 @@ public abstract class Person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getId() {
+        return id;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + ", Age: " + age;
+        return "ID: " + id + ", Name: " + name;
     }
 }

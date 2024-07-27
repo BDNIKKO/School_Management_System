@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) {
         SchoolService schoolService = new SchoolService();
 
-        Student student1 = new Student("Rakshith Vasudev", 20, "S001");
-        Student student2 = new Student("Lizzy", 22, "S002");
-        Teacher teacher1 = new Teacher(1, "Vanderhorn", 45, "Mathematics");
-        Teacher teacher2 = new Teacher(2, "Melissa", 38, "History");
-        Teacher teacher3 = new Teacher(6, "Megan", 30, "Science");
+        Student student1 = new Student(1, "Rakshith Vasudev");
+        Student student2 = new Student(2, "Lizzy");
+        Teacher teacher1 = new Teacher(1, "Vanderhorn", 1050);
+        Teacher teacher2 = new Teacher(2, "Melissa", 700);
+        Teacher teacher3 = new Teacher(6, "Megan", 900);
 
         schoolService.addStudent(student1);
         schoolService.addStudent(student2);
