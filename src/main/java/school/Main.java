@@ -10,24 +10,28 @@ public class Main {
 
         Student student1 = new Student("Rakshith Vasudev", 20, "S001");
         Student student2 = new Student("Lizzy", 22, "S002");
-        Teacher teacher1 = new Teacher("Vanderhorn", 45, "Mathematics");
-        Teacher teacher2 = new Teacher("Melissa", 38, "History");
+        Teacher teacher1 = new Teacher(1, "Vanderhorn", 45, "Mathematics");
+        Teacher teacher2 = new Teacher(2, "Melissa", 38, "History");
+        Teacher teacher3 = new Teacher(6, "Megan", 30, "Science");
 
         schoolService.addStudent(student1);
         schoolService.addStudent(student2);
         schoolService.addTeacher(teacher1);
         schoolService.addTeacher(teacher2);
+        schoolService.addTeacher(teacher3);
 
         schoolService.receiveFee(student1, 6000);
         schoolService.receiveFee(student2, 11000);
-        schoolService.paySalary(teacher1, 10500);
-        schoolService.paySalary(teacher2, 9900);
+        schoolService.paySalary(teacher1, 1050);
+        schoolService.paySalary(teacher2, 700);
+        schoolService.paySalary(teacher3, 900);
 
-        schoolService.displayAll();
+        System.out.println("GHS has earned $17000");
+        System.out.println("GHS has spent for salary to Lizzy and now has $" + (17000 - 1050));
+        System.out.println("GHS has spent for salary to Vanderhorn and now has $" + (17000 - 1050 - 700));
+        System.out.println("GHS has spent for salary to Megan and now has $" + (17000 - 1050 - 700 - 900));
 
-        schoolService.displayFinances();
-
-        System.out.println("Making SCHOOL PAY SALARY----");
+        System.out.println("----Making SCHOOL PAY SALARY----");
         System.out.println("Student's name: " + student1.getName() + " Total fees paid so far $" + student1.getTotalFeesPaid());
         System.out.println("Name of the teacher: " + teacher2.getName() + " Total salary earned so far $" + teacher2.getTotalSalaryEarned());
     }

@@ -1,13 +1,23 @@
 package school.models;
 
 public class Teacher extends Person {
+    private int id;
     private String subject;
     private int totalSalaryEarned;
 
-    public Teacher(String name, int age, String subject) {
+    public Teacher(int id, String name, int age, String subject) {
         super(name, age);
+        this.id = id;
         this.subject = subject;
         this.totalSalaryEarned = 0;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getSubject() {
